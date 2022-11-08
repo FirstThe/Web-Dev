@@ -1,0 +1,29 @@
+.loader {
+    /*création du loader*/
+    border: 10px solid #f8cece;
+    border-top: 10px solid #f1beae;
+    border-bottom: 10px solid #f37260;
+    border-left: 10px solid #fa19198c;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 1.5s linear infinite ;/*webkit pour les navig. chrome et spin etc.. c'est tournoyer pendant 3s de façon linéaire et infinie*/
+    -o-animation: spin 1.5s linear infinite ;
+    animation: spin 1.5s linear infinite ;
+    /*#7ed6df(bleu moyen) #95afc0(aigle planant)*/
+    /*Placement du loader au milieu de la page*/
+    margin: auto;/*auto centre horizontalement*/
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+/*Animation du loader*/
+/*En gros elle vas tourner durant 3sec de 0deg à 360deg  de façcon  linéaire et infinie*/
+/*Ajouter -webkit- derrière keyframes et transform pour les autres navigateurs*/
+@keyframes spin{/*spécifie le code de l'animation*/
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
